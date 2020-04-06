@@ -1,3 +1,5 @@
+package com.vasu.java8practice;
+
 public class Greeter {
 
     public void greet (Greeting greeting) {
@@ -15,5 +17,13 @@ public class Greeter {
         };
         greeter.greet(greetingLambda);
         greeter.greet(innerClassGreeting);
+
+        StringLengthLambda stringLengthLambda = s -> s.length();
+        System.out.println(stringLengthLambda.perform("What is the length of a String"));
+
+    }
+
+    public interface StringLengthLambda {
+        int perform(String s);
     }
 }
