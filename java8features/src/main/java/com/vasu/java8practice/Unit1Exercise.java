@@ -2,7 +2,7 @@ package com.vasu.java8practice;
 
 import java.util.*;
 
-public class Unit1Excercise {
+public class Unit1Exercise {
 
     public static void main(String[] args) {
 
@@ -37,11 +37,9 @@ public class Unit1Excercise {
         Collections.sort(people, new Comparator<Person>() {
             @Override
             public int compare(Person o1, Person o2) {
-                Person p1 = (Person) o1;
-                Person p2 = (Person) o2;
 
-                if(p1.getLastName().compareTo(p2.getLastName()) != 0){
-                    return p1.getLastName().compareTo(p2.getLastName());
+                if(o1.getLastName().compareTo(o2.getLastName()) != 0){
+                    return o1.getLastName().compareTo(o2.getLastName());
                 }
 
                 return 0;
@@ -49,9 +47,7 @@ public class Unit1Excercise {
         });
         System.out.println(people);
 
-        Collections.sort(people, ((o1, o2) -> {
-            Person p1 = (Person) o1;
-            Person p2 = (Person) o2;
+        Collections.sort(people, ((p1, p2) -> {
 
             if(p1.getLastName().compareTo(p2.getLastName()) != 0){
                 return p1.getLastName().compareTo(p2.getLastName());

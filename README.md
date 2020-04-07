@@ -34,4 +34,5 @@ Functional Interface:
 ---------------------
 . @FunctionalInterface helps to not to change the behaviour of interface from functional interface.
 . Any Functional Interface can have one and only one abstract method. 
+. Generic type interfaces in java.util.function package. (Out of box interfaces Ex: Predicate, Consumer, Supplier and Function etc.,)
 
